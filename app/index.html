@@ -1,0 +1,51 @@
+<html ng-app="demo">
+<head>
+    <title>demo</title>
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body>
+	<div ng-controller="helloController">
+		{{3224/32 | number:2 | currency}}<br/>{{message}}
+		
+		<h1>Events Registraion App</h1>
+		<h2 ng-class="myClass">THIS IS THE COLOR FROM CSS</h2>
+    <!--<img ng-src="{{event.imgUrl}}" alt="{{event.name}}" />-->
+    <hr/>
+		<h3>{{event.name}}</h3>
+		<h3>{{event.date | date:'medium'}}</h3>
+		<h3>{{event.time}}</h3>
+
+		<ul>
+			<li ng-repeat="session in event.sessions|limitTo:4|orderBy:sortorder">
+				<h3>{{session.name|uppercase}}</h3>
+				<h3>{{session.duration|durations}}</h3>
+				<h3>{{session.level}}</h3>
+				<h3>{{session.rating}}</h3>
+				<button ng-click="upCount(session)" id="inc">inc</button>
+				<button ng-click="dnCount(session)" id="dec">dec</button>
+			</li>
+		</ul>
+
+		<span ng-bind="event.name"></span><br>
+		<span ng-bind-template="{{event.name}} {{event.date}}"></span>
+
+	</div>
+	
+	<div>{{{a:3, b:'h1', c:'h3'}|json}}</div>
+
+	<br>
+	<button id="btnDisabled" ng-disabled="buttonDisable">Disable</button>
+	<button ng-click="showFun()" ng-show="show" id="btnShow">Show</button>
+
+	<script type="text/javascript" src="script/angular.min.js"></script>
+	<!--Module-->
+	<script type="text/javascript" src="app.js"></script>
+	<!--Controllers-->
+	<script type="text/javascript" src="controllers/helloController.js"></script>
+	<!--Services-->
+	<script type="text/javascript" src="services/eventData.js"></script>
+	<!--Custom Filters-->
+	<script type="text/javascript" src="../filter/durations.js"></script>
+
+</body>
+</html>

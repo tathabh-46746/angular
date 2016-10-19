@@ -1,0 +1,26 @@
+{
+  "name": "Angular Boot Camp",
+  "date": "13758412654",
+  "time": "10am",
+  "imgUrl": "../images/logo.png",
+  "sessions": [
+        {
+          "name": "Directives in angular",
+          "duration": 3,
+          "level": "intermediate",
+          "rating": 2
+        },
+        {
+          "name": "Routing in angular",
+          "duration": 2,
+          "level": "intermediate",
+          "rating": 3
+        },
+        {
+          "name": "Animation in angular",
+          "duration": 4,
+          "level": "intermediate",
+          "rating": 5
+        }
+  ]
+}

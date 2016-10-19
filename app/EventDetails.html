@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+    <title>ANGULAR MODEL</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <style type="text/css">input.ng-invalid1{background-color: red;}</style>
+</head>
+<body class="container" ng-controller="EditEventController">
+    <div>
+        <div class="navbar-inner">
+            <h1>New Event</h1>
+        </div>
+    </div>
+
+    <form name="newForm">
+        <fieldset>
+            <label for="eventName">Event Name</label> <!-- for and id will have same value -->
+            <input id="eventName" type="text" required ng-model="event.name" placeholder="Enter your name"/>
+            <span>{{event.name}}</span>
+
+            <label for="eventDate">Event Date</label> <!-- for and id will have same value -->
+            <input id="eventDate" type="text"/>
+
+            <label for="eventCity">City</label> <!-- for and id will have same value -->
+            <input id="eventCity" type="text" placeholder="Enter city"/>
+
+            <label for="eventLocation">Location</label> <!-- for and id will have same value -->
+            <input id="eventLocation" type="text" placeholder="Enter location"/>
+
+            <br><br>
+
+            <button type="submit" class="btn btn-primary"  ng-click="saveEvent(event,newForm)">Save</button>
+            <button type="submit" class="btn btn-primary">Cancel</button>
+        </fieldset>
+    </form>
+
+
+    <script type="text/javascript" src="script/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="controllers/EditEventController.js"></script>
+
+</body>
+</html>
