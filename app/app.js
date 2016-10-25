@@ -1,2 +1,3 @@
 'use strict';
-var demo = angular.module('demo', []);
+//Adding ng-route directive
+var demo = angular.module('demo', ['ngRoute']);

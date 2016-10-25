@@ -2,15 +2,6 @@
 <head>
     <title>demo</title>
     <link rel="stylesheet" type="text/css" href="css/app.css">
-    <script type="text/javascript" src="script/angular.min.js"></script>
-    <!--Module-->
-    <script type="text/javascript" src="app.js"></script>
-    <!--Controllers-->
-    <script type="text/javascript" src="controllers/helloController.js"></script>
-    <!--Services-->
-    <script type="text/javascript" src="services/eventData.js"></script>
-    <!--Custom Filters-->
-    <script type="text/javascript" src="../filter/durations.js"></script>
 </head>
 <body>
 	<div ng-controller="helloController">
@@ -50,7 +41,20 @@
     Language clicked is :- {{ defaultValue }}
   </div>
 
+  <div ng-view></div>
 
+
+
+  <script type="text/javascript" src="script/angular.min.js"></script>
+  <script type="text/javascript" src="script/angular-route.min.js"></script>
+  <!--Module-->
+  <script type="text/javascript" src="app.js"></script>
+  <!--Controllers-->
+  <script type="text/javascript" src="controllers/helloController.js"></script>
+  <!--Services-->
+  <script type="text/javascript" src="services/eventData.js"></script>
+  <!--Custom Filters-->
+  <script type="text/javascript" src="../filter/durations.js"></script>
 
 </body>
 </html>
