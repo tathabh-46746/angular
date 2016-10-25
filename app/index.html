@@ -1,7 +1,16 @@
 <html ng-app="demo">
 <head>
     <title>demo</title>
-	<link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <script type="text/javascript" src="script/angular.min.js"></script>
+    <!--Module-->
+    <script type="text/javascript" src="app.js"></script>
+    <!--Controllers-->
+    <script type="text/javascript" src="controllers/helloController.js"></script>
+    <!--Services-->
+    <script type="text/javascript" src="services/eventData.js"></script>
+    <!--Custom Filters-->
+    <script type="text/javascript" src="../filter/durations.js"></script>
 </head>
 <body>
 	<div ng-controller="helloController">
@@ -29,23 +38,19 @@
 		<span ng-bind="event.name"></span><br>
 		<span ng-bind-template="{{event.name}} {{event.date}}"></span>
 
-	</div>
-	
-	<div>{{{a:3, b:'h1', c:'h3'}|json}}</div>
+  </div>
 
-	<br>
-	<button id="btnDisabled" ng-disabled="buttonDisable">Disable</button>
-	<button ng-click="showFun()" ng-show="show" id="btnShow">Show</button>
+  <div ng-controller="btnController">
+    <button ng-click="php()">PHP</button>
+    <button ng-click="js()">JS</button>
+    <button ng-click="cpp()">C++</button>
+    <button ng-click="java()">JAVA</button>
+    <button ng-click="asp()">ASP.NET</button>
 
-	<script type="text/javascript" src="script/angular.min.js"></script>
-	<!--Module-->
-	<script type="text/javascript" src="app.js"></script>
-	<!--Controllers-->
-	<script type="text/javascript" src="controllers/helloController.js"></script>
-	<!--Services-->
-	<script type="text/javascript" src="services/eventData.js"></script>
-	<!--Custom Filters-->
-	<script type="text/javascript" src="../filter/durations.js"></script>
+    Language clicked is :- {{ defaultValue }}
+  </div>
+
+
 
 </body>
 </html>

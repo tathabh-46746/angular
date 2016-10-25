@@ -25,3 +25,27 @@ demo.controller('helloController', function helloController($scope, eventData) {
 		$scope.show = false;
 	}
 });
+
+
+demo.controller('btnController', ['$scope',function btnController($scope){
+    $scope.defaultValue = 'None';
+    
+    $scope.php = function() {
+         $scope.defaultValue = 'PHP';    
+    }
+    $scope.js = function() {
+         $scope.defaultValue = 'JAVASCRIPT';    
+    }
+    $scope.java = function() {
+         $scope.defaultValue = 'JAVA';    
+    }
+    $scope.cpp = function() {
+         $scope.defaultValue = 'C++';    
+    }
+    $scope.asp = function() {
+         $scope.defaultValue = 'ASP.NET';    
+    }
+    
+    
+    
+}]);
